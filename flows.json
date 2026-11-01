@@ -1,1 +1,1434 @@
-[]
+[
+    {
+        "id": "a410718cc2e6ec75",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fe1e7b7ea7b6af25",
+        "type": "tab",
+        "label": "how to telegram",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a90e3318d0857482",
+        "type": "group",
+        "z": "a410718cc2e6ec75",
+        "name": "Thermostat with Notification",
+        "style": {
+            "label": true,
+            "color": "#001f60",
+            "stroke": "#ffcf3f"
+        },
+        "nodes": [
+            "c9e7cb7fd4982dfe",
+            "e5862eba63561053",
+            "4d236b508f821ecc",
+            "723a2106bd20e041",
+            "658b52e839ea4492",
+            "77595d9b7f7ba9d8",
+            "2c8d650cacf35d88",
+            "f294d2a95d0c8f5a",
+            "29a417762bfc3b3d",
+            "9ecbbb75de8a5a9d",
+            "eec8f4124314d094",
+            "1f8b4a27a6d1b71c",
+            "10c7f4a970e90404",
+            "c246f42ba6166890",
+            "1851ffc08d992b5f",
+            "b166e5f387e5e6f9",
+            "9abe57fe06b353bd",
+            "57037291da285e3f",
+            "6caa1451f13ca7df",
+            "a52aa4ab4cedfbc8",
+            "e29487d9e7b416ef",
+            "3fc82b42964f2adc",
+            "f121a3959a6a5a9a",
+            "83d5a094b3e0ccd0",
+            "4c7428991766f023",
+            "67a6b2ce621f9077",
+            "2592c16c5419cf50"
+        ],
+        "x": 214,
+        "y": 119,
+        "w": 982,
+        "h": 442
+    },
+    {
+        "id": "9caedb94e1db0346",
+        "type": "group",
+        "z": "a410718cc2e6ec75",
+        "name": "",
+        "style": {
+            "stroke": "#ff7f7f",
+            "label": true
+        },
+        "nodes": [
+            "09c81421a7d32a91",
+            "cf92c2414fc98cfc",
+            "de18b5ba5cc00b5b",
+            "5e78649ecd2bacb8",
+            "faa719d19cb14e3e"
+        ],
+        "x": 214,
+        "y": 579,
+        "w": 1002,
+        "h": 82
+    },
+    {
+        "id": "c479b8623829f762",
+        "type": "group",
+        "z": "fe1e7b7ea7b6af25",
+        "name": "1. start a chat on the Telegram App and get the chatid here",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "cbaa0df015c1f4f5",
+            "8ba31593081d739a",
+            "7ca679c5b29edcb1"
+        ],
+        "x": 164,
+        "y": 119,
+        "w": 742,
+        "h": 122
+    },
+    {
+        "id": "6e3044c756c1cabf",
+        "type": "group",
+        "z": "fe1e7b7ea7b6af25",
+        "name": "2. Modify the Token and the ChatID for your Telegram App for Notification",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c1b4a361f3e79ae7",
+            "45bf9c6ac9cb9496",
+            "6c4820581061fca1",
+            "45926e7ab1de5e54"
+        ],
+        "x": 174,
+        "y": 279,
+        "w": 732,
+        "h": 82
+    },
+    {
+        "id": "819d0c486fc1b01f",
+        "type": "group",
+        "z": "fe1e7b7ea7b6af25",
+        "name": "3. Set the Command and inject to the Flow",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e971da97fe6bf15e",
+            "786c74a372af17e9",
+            "c667089e89d4b0c5",
+            "a78238ea0aef2c8d"
+        ],
+        "x": 174,
+        "y": 399,
+        "w": 732,
+        "h": 122
+    },
+    {
+        "id": "98c20a354248900b",
+        "type": "group",
+        "z": "fe1e7b7ea7b6af25",
+        "name": "Simple HTTPS Notification",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "69642575ccc1c2e2",
+            "a7ea42331a27dbb9",
+            "fa0bb5e17bc85428",
+            "9aaaec2b2d199aea",
+            "e58e7301cd93480a",
+            "6b79d61f6323ae4c"
+        ],
+        "x": 174,
+        "y": 559,
+        "w": 732,
+        "h": 142
+    },
+    {
+        "id": "388de1236a0efa9c",
+        "type": "io7-hub",
+        "name": "app1",
+        "host": "mqtt",
+        "useTLS": false,
+        "knownPort": true,
+        "port": "1883",
+        "tls": "",
+        "clientid": ""
+    },
+    {
+        "id": "d9778518ed9f8fee",
+        "type": "telegram bot",
+        "botname": "gm_iot_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "70b4b7fcd74eb3b6",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "5acf4d7056c23dc4",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "e37493204bcc84c3",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "70b4b7fcd74eb3b6",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "5acf4d7056c23dc4",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "370afb24071ccbf1",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "e37493204bcc84c3",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default"
+    },
+    {
+        "id": "c9e7cb7fd4982dfe",
+        "type": "io7 in",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "valve1",
+        "deviceId": "valve1",
+        "authentication": "388de1236a0efa9c",
+        "evt": "status",
+        "fmt": "json",
+        "qos": "0",
+        "allDevices": false,
+        "allEvents": false,
+        "allFormats": false,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "658b52e839ea4492"
+            ]
+        ]
+    },
+    {
+        "id": "e5862eba63561053",
+        "type": "io7 out",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "authentication": "388de1236a0efa9c",
+        "name": "valve1",
+        "deviceId": "valve1",
+        "cmd": "power",
+        "fmt": "json",
+        "qos": "0",
+        "retain": "false",
+        "x": 1110,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4d236b508f821ecc",
+        "type": "io7 out",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "authentication": "388de1236a0efa9c",
+        "name": "thermostat1",
+        "deviceId": "thermostat1",
+        "cmd": "set",
+        "fmt": "json",
+        "qos": "0",
+        "retain": "false",
+        "x": 1090,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "723a2106bd20e041",
+        "type": "io7 in",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "thermostat1",
+        "deviceId": "thermostat1",
+        "authentication": "388de1236a0efa9c",
+        "evt": "status",
+        "fmt": "json",
+        "qos": "0",
+        "allDevices": false,
+        "allEvents": false,
+        "allFormats": false,
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "f294d2a95d0c8f5a",
+                "10c7f4a970e90404",
+                "67a6b2ce621f9077"
+            ]
+        ]
+    },
+    {
+        "id": "658b52e839ea4492",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "update ui",
+        "func": "msg.payload = msg.payload.d.valve;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 160,
+        "wires": [
+            [
+                "9ecbbb75de8a5a9d",
+                "b1b075d781159b19"
+            ]
+        ]
+    },
+    {
+        "id": "77595d9b7f7ba9d8",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "valve:on/off",
+        "func": "msg.payload = {\n    \"d\" : {\n        \"valve\" : msg.payload\n    }\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 160,
+        "wires": [
+            [
+                "e5862eba63561053"
+            ]
+        ]
+    },
+    {
+        "id": "2c8d650cacf35d88",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "automate",
+        "func": "let evt1 = { d : {}};\n\nif (msg.payload.d.target > msg.payload.d.temperature) {\n    evt1.d.valve = 'on';\n} else {\n    evt1.d.valve = 'off';  \n}\nreturn {payload : evt1};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 240,
+        "wires": [
+            [
+                "e5862eba63561053"
+            ]
+        ]
+    },
+    {
+        "id": "f294d2a95d0c8f5a",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "update ui 2",
+        "func": "let target = {\n    payload : msg.payload.d.target\n}\nlet temperature = {\n    payload : msg.payload.d.temperature\n}\nreturn [target, temperature];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "1f8b4a27a6d1b71c"
+            ],
+            [
+                "eec8f4124314d094"
+            ]
+        ]
+    },
+    {
+        "id": "29a417762bfc3b3d",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "target",
+        "func": "msg.payload = {\n    \"d\" : {\n        \"target\" : msg.payload\n    }\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 340,
+        "wires": [
+            [
+                "4d236b508f821ecc"
+            ]
+        ]
+    },
+    {
+        "id": "eec8f4124314d094",
+        "type": "ui-gauge",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "",
+        "group": "370afb24071ccbf1",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 4,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "℃",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "22",
+                "color": "#0056d6",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "32",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 690,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f8b4a27a6d1b71c",
+        "type": "ui-slider",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "group": "370afb24071ccbf1",
+        "name": "",
+        "label": "Target Temp",
+        "tooltip": "",
+        "order": 6,
+        "width": 3,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "always",
+        "min": "10",
+        "max": "60",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": true,
+        "x": 690,
+        "y": 320,
+        "wires": [
+            [
+                "29a417762bfc3b3d"
+            ]
+        ]
+    },
+    {
+        "id": "9ecbbb75de8a5a9d",
+        "type": "ui-switch",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "",
+        "label": "Heating",
+        "group": "370afb24071ccbf1",
+        "order": 7,
+        "width": 1,
+        "height": 0,
+        "passthru": false,
+        "decouple": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 680,
+        "y": 160,
+        "wires": [
+            [
+                "77595d9b7f7ba9d8"
+            ]
+        ]
+    },
+    {
+        "id": "10c7f4a970e90404",
+        "type": "gate",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": false,
+        "storeName": "memory",
+        "x": 470,
+        "y": 240,
+        "wires": [
+            [
+                "2c8d650cacf35d88"
+            ]
+        ]
+    },
+    {
+        "id": "c246f42ba6166890",
+        "type": "link in",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "",
+        "links": [
+            "3fc82b42964f2adc"
+        ],
+        "x": 255,
+        "y": 240,
+        "wires": [
+            [
+                "10c7f4a970e90404"
+            ]
+        ]
+    },
+    {
+        "id": "1851ffc08d992b5f",
+        "type": "telegram command",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "",
+        "command": "/set",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "d9778518ed9f8fee",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 440,
+        "wires": [
+            [
+                "b166e5f387e5e6f9"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b166e5f387e5e6f9",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "parsing",
+        "func": "let cmd = msg.payload.content.trim().split(':').map(item => item.trim());\nif (cmd.length < 2) return;\n\nmsg.payload = { [cmd[0]]: cmd[1] };\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "9abe57fe06b353bd",
+                "4c7428991766f023"
+            ]
+        ]
+    },
+    {
+        "id": "9abe57fe06b353bd",
+        "type": "switch",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "temp",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "auto",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "57037291da285e3f"
+            ],
+            [
+                "6caa1451f13ca7df"
+            ]
+        ]
+    },
+    {
+        "id": "57037291da285e3f",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "temp",
+        "func": "if (!msg.payload.temp) return null;\n\nmsg.payload =  msg.payload.temp\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 420,
+        "wires": [
+            [
+                "29a417762bfc3b3d",
+                "2592c16c5419cf50"
+            ]
+        ]
+    },
+    {
+        "id": "a52aa4ab4cedfbc8",
+        "type": "ui-switch",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "",
+        "label": "Enable Automation",
+        "group": "370afb24071ccbf1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "open",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "close",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 870,
+        "y": 460,
+        "wires": [
+            [
+                "e29487d9e7b416ef"
+            ]
+        ]
+    },
+    {
+        "id": "e29487d9e7b416ef",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "auto:on/off",
+        "func": "msg.topic = 'control';\nflow.set('enableAuto', msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 460,
+        "wires": [
+            [
+                "3fc82b42964f2adc"
+            ]
+        ]
+    },
+    {
+        "id": "3fc82b42964f2adc",
+        "type": "link out",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "auto_in",
+        "mode": "link",
+        "links": [
+            "c246f42ba6166890"
+        ],
+        "x": 1155,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "6caa1451f13ca7df",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "cmdMap",
+        "func": "if (!msg.payload.auto) return null;\n\nconst cmdMap = {'on':'open', 'true':'open', 'off':'close','false':'close'};\n\nif (cmdMap[msg.payload.auto] === undefined) {\n    return null;\n    \n}\nmsg.payload = cmdMap[msg.payload.auto];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 460,
+        "wires": [
+            [
+                "a52aa4ab4cedfbc8"
+            ]
+        ]
+    },
+    {
+        "id": "f121a3959a6a5a9a",
+        "type": "inject",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "init Auto",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "83d5a094b3e0ccd0"
+            ]
+        ]
+    },
+    {
+        "id": "83d5a094b3e0ccd0",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "restore Auto setting",
+        "func": "msg.payload = flow.get('enableAuto') || 'open';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 520,
+        "wires": [
+            [
+                "a52aa4ab4cedfbc8"
+            ]
+        ]
+    },
+    {
+        "id": "09c81421a7d32a91",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "9caedb94e1db0346",
+        "name": "weather",
+        "func": "let lat = \"37.328128\";\nlet lon = \"126.689262\";\nlet key = '4ebb7c510e9f3221609e835491274bb8'\n\n\nmsg.url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=metric&cnt=3`\n// msg.url += '&lat=' + lat + '&lon=' + lon;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 620,
+        "wires": [
+            [
+                "de18b5ba5cc00b5b"
+            ]
+        ]
+    },
+    {
+        "id": "cf92c2414fc98cfc",
+        "type": "inject",
+        "z": "a410718cc2e6ec75",
+        "g": "9caedb94e1db0346",
+        "name": "3Hrs",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10800",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "09c81421a7d32a91"
+            ]
+        ]
+    },
+    {
+        "id": "de18b5ba5cc00b5b",
+        "type": "http request",
+        "z": "a410718cc2e6ec75",
+        "g": "9caedb94e1db0346",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 690,
+        "y": 620,
+        "wires": [
+            [
+                "5e78649ecd2bacb8"
+            ]
+        ]
+    },
+    {
+        "id": "5e78649ecd2bacb8",
+        "type": "function",
+        "z": "a410718cc2e6ec75",
+        "g": "9caedb94e1db0346",
+        "name": "Temp Drop?",
+        "func": "let dt = new Date(msg.payload.list[0].dt * 1000);\nconst temp_thresold = 16;\n\nlet avg = (msg.payload.list[0].main.temp + msg.payload.list[1].main.temp) / 2;\nlet temp_trend = -(msg.payload.list[0].main.temp - msg.payload.list[1].main.temp);\n\nif (avg > temp_thresold || temp_trend > 0) {\n    return null;\n}\n\nmsg.payload = {\n    chatId: '9041297602',\n    type: 'message',\n    content: `Temperature is dropping fast to ${avg.toFixed(1)}°C! Check the Heating`\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 620,
+        "wires": [
+            [
+                "faa719d19cb14e3e"
+            ]
+        ]
+    },
+    {
+        "id": "faa719d19cb14e3e",
+        "type": "telegram sender",
+        "z": "a410718cc2e6ec75",
+        "g": "9caedb94e1db0346",
+        "name": "",
+        "bot": "d9778518ed9f8fee",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1100,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c7428991766f023",
+        "type": "debug",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "67a6b2ce621f9077",
+        "type": "debug",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2592c16c5419cf50",
+        "type": "debug",
+        "z": "a410718cc2e6ec75",
+        "g": "a90e3318d0857482",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b1b075d781159b19",
+        "type": "debug",
+        "z": "a410718cc2e6ec75",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8ba31593081d739a",
+        "type": "debug",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "c479b8623829f762",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7ca679c5b29edcb1",
+        "type": "debug",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "c479b8623829f762",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "45bf9c6ac9cb9496",
+        "type": "function",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "6e3044c756c1cabf",
+        "name": "msg prep",
+        "func": "msg.payload = {\n    chatId: '9041297602',\n    type : 'message',\n    content : 'Hello There' + msg.payload\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 320,
+        "wires": [
+            [
+                "c1b4a361f3e79ae7"
+            ]
+        ]
+    },
+    {
+        "id": "6c4820581061fca1",
+        "type": "inject",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "6e3044c756c1cabf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 320,
+        "wires": [
+            [
+                "45bf9c6ac9cb9496"
+            ]
+        ]
+    },
+    {
+        "id": "45926e7ab1de5e54",
+        "type": "debug",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "6e3044c756c1cabf",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "786c74a372af17e9",
+        "type": "debug",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "819d0c486fc1b01f",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c667089e89d4b0c5",
+        "type": "debug",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "819d0c486fc1b01f",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "69642575ccc1c2e2",
+        "type": "inject",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "98c20a354248900b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 660,
+        "wires": [
+            [
+                "fa0bb5e17bc85428"
+            ]
+        ]
+    },
+    {
+        "id": "a7ea42331a27dbb9",
+        "type": "debug",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "98c20a354248900b",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "fa0bb5e17bc85428",
+        "type": "function",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "98c20a354248900b",
+        "name": "send msg",
+        "func": "let originalText = msg.payload || \"Glad to hear from you\";\nconst token = flow.get('tele_token');\nmsg.url = `https://api.telegram.org/bot${token}/sendMessage`;\n\nmsg.payload = {\n    chat_id: \"7855705275\",\n    text: originalText  // Use the stored original value\n};\n\nmsg.headers = {\n    \"Content-Type\": \"application/json\",\n    \"User-Agent\": \"Node-RED/1.0\"\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 660,
+        "wires": [
+            [
+                "6b79d61f6323ae4c"
+            ]
+        ]
+    },
+    {
+        "id": "9aaaec2b2d199aea",
+        "type": "inject",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "98c20a354248900b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 600,
+        "wires": [
+            [
+                "e58e7301cd93480a"
+            ]
+        ]
+    },
+    {
+        "id": "e58e7301cd93480a",
+        "type": "function",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "98c20a354248900b",
+        "name": "global token",
+        "func": "flow.set('tele_token','8295050531:AAHZ5555555y3bwW1h2OTklyepnGRuJ2rA')\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6b79d61f6323ae4c",
+        "type": "http request",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "98c20a354248900b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 630,
+        "y": 660,
+        "wires": [
+            [
+                "a7ea42331a27dbb9"
+            ]
+        ]
+    },
+    {
+        "id": "a78238ea0aef2c8d",
+        "type": "function",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "819d0c486fc1b01f",
+        "name": "command parsing",
+        "func": "let cmd = msg.payload.content.trim().split(':').map(item => item.trim());\nif (cmd.length < 2) return;\n\nmsg.payload = { [cmd[0]]: cmd[1] };\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 440,
+        "wires": [
+            [
+                "786c74a372af17e9"
+            ]
+        ]
+    },
+    {
+        "id": "cbaa0df015c1f4f5",
+        "type": "telegram receiver",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "c479b8623829f762",
+        "name": "",
+        "bot": "d9778518ed9f8fee",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "handleprocessupdates": false,
+        "x": 280,
+        "y": 180,
+        "wires": [
+            [
+                "8ba31593081d739a"
+            ],
+            [
+                "7ca679c5b29edcb1"
+            ]
+        ]
+    },
+    {
+        "id": "e971da97fe6bf15e",
+        "type": "telegram command",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "819d0c486fc1b01f",
+        "name": "",
+        "command": "/set",
+        "description": "",
+        "registercommand": false,
+        "language": "",
+        "scope": "default",
+        "bot": "d9778518ed9f8fee",
+        "strict": false,
+        "hasresponse": true,
+        "useregex": false,
+        "removeregexcommand": false,
+        "outputs": 2,
+        "x": 250,
+        "y": 460,
+        "wires": [
+            [
+                "a78238ea0aef2c8d"
+            ],
+            [
+                "c667089e89d4b0c5"
+            ]
+        ]
+    },
+    {
+        "id": "c1b4a361f3e79ae7",
+        "type": "telegram sender",
+        "z": "fe1e7b7ea7b6af25",
+        "g": "6e3044c756c1cabf",
+        "name": "",
+        "bot": "d9778518ed9f8fee",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 320,
+        "wires": [
+            [
+                "45926e7ab1de5e54"
+            ]
+        ]
+    }
+]
